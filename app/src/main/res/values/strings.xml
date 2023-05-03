@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">HolynicMobileApp</string>
+    <string name="get_started">Get Started</string>
+    <string name="hey_there">Hey there,</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="confirm">By continuing you accept our Privacy Policy and Term of Use</string>
+    <string name="first_name">First Name</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login">Login</string>
+    <string name="or">Or</string>
+    <string name="ask_register">Don’t have an account yet? Register</string>
+    <string name="welcome">Welcome, Faiz</string>
+    <string name="set">You are all set now, let’s reach your\ngoals together with us</string>
+    <string name="gotoh">Go To Home</string>
+    <string name="name">Faiz Susanto</string>
+    <string name="doctor">Doctor</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="hospital">Hospital</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="top_doctor">Top Doctor</string>
+    <string name="see_all">See all</string>
+    <string name="health_article">Health article</string>
+    <string name="parel">Dr. Farel Sadboy</string>
+    <string name="cardiologist">Cardiologist</string>
+    <string name="fanny">Dr. Fanny Retza</string>
+    <string name="psychologist">Psychologist</string>
+
+
+</resources>
