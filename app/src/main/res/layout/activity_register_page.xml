@@ -31,46 +31,59 @@
 
     <EditText
         android:id="@+id/edt_firstname_reg"
-        android:drawableStart="@drawable/ic_baseline_person_24"
-        android:drawablePadding="@dimen/fragment_horizontal_margin"
+        android:drawableStart="@drawable/register1"
+        android:drawablePadding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fragment_vertical_margin"
         android:inputType="textPersonName"
         android:hint="@string/first_name"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        android:background="@drawable/border_image"
+        android:padding="15dp"
         android:autofillHints="" />
 
     <EditText
         android:id="@+id/edt_lastName_reg"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="@dimen/fragment_horizontal_margin"
+        android:drawableLeft="@drawable/register1"
+        android:drawablePadding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fragment_vertical_margin"
-        android:ems="10"
         android:inputType="textPersonName"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        android:background="@drawable/border_image"
+        android:padding="15dp"
         android:hint="Last Name" />
 
     <EditText
         android:id="@+id/edt_email_reg"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
-        android:drawablePadding="@dimen/fragment_horizontal_margin"
+        android:drawableLeft="@drawable/register2"
+        android:drawablePadding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fragment_vertical_margin"
-        android:ems="10"
+        android:textSize="12sp"
+        android:background="@drawable/border_image"
+        android:padding="15dp"
+        android:fontFamily="@font/poppins_regular"
         android:inputType="textPersonName"
         android:hint="Email" />
 
     <EditText
         android:id="@+id/edt_password_reg"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="@dimen/fragment_horizontal_margin"
+        android:drawableLeft="@drawable/register3"
+        android:drawablePadding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/fragment_vertical_margin"
-        android:ems="10"
         android:inputType="textPassword"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        android:background="@drawable/border_image"
+        android:padding="15dp"
         android:hint="Password"
         />
 
@@ -92,6 +105,48 @@
         android:text="Register"
         android:background="@drawable/round_btn"
         />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_vertical_margin"
+        android:text="@string/or"
+        android:textAlignment="center"
+        android:textSize="12sp" />
 
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ask_login"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="9dp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textSize="14sp"
+                android:textColor="@color/color_1"
+                android:paddingTop="8dp"
+                android:fontFamily="@font/poppins_medium"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

@@ -14,6 +14,24 @@
         android:theme="@style/Theme.HolynicMobileApp"
         tools:targetApi="31">
         <activity
+            android:name=".ArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PharmacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".FindDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".ListHospital"
+            android:exported="false" />
+        <activity
             android:name=".ListDoctor"
             android:exported="false" />
         <activity

@@ -8,13 +8,20 @@
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/drawable-v24/round_btn.xml" value="0.136" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/drawable/border_image.xml" value="0.155" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/drawable/round_btn.xml" value="0.136" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/drawable/round_btn2.xml" value="0.155" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/font/poppins.xml" value="0.2518518518518518" />
-        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
-        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_list_doctor.xml" value="0.2359375" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_article.xml" value="0.264" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_detail_doctor.xml" value="0.264" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_find_doctor.xml" value="0.2" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_list_doctor.xml" value="0.136" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_list_hospital.xml" value="0.25" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_login_page.xml" value="0.25" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_login_success.xml" value="0.1" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
-        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_register_page.xml" value="0.10989583333333333" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_notification.xml" value="0.25" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_pharmacy.xml" value="0.176" />
+        <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_register_page.xml" value="0.264" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/layout/activity_welcome_screen.xml" value="0.25" />
         <entry key="..\:/Kuliah/semester 4/HolynicMobileApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
       </map>

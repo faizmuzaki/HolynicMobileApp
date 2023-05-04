@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <ImageButton
-                android:id="@+id/btn_plus"
+                android:id="@+id/doctor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu1"
@@ -80,7 +80,7 @@
                 />
 
             <TextView
-                android:id="@+id/doctor"
+                android:id="@+id/textdoctor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/doctor"
@@ -228,54 +228,186 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/border_image">
                 <ImageButton
-                    android:id="@+id/doct1"
+                    android:id="@+id/doctor1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/doct1"
+                    android:src="@drawable/list1"
                     android:background="@color/white"
                     android:paddingTop="15dp"
                     android:paddingRight="25dp"
                     android:paddingLeft="15dp"
-                    android:paddingBottom="7dp"
-                    />
+                    android:paddingBottom="7dp" />
+                <TextView
+                    android:id="@+id/namedoctor1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parel"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/stok2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cardiologist"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray_2"/>
 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="5dp">
+                    <ImageButton
+                        android:id="@+id/rating1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ratdas"
+                        android:background="@color/white" />
+                    <ImageButton
+                        android:id="@+id/location1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/locdas"
+                        android:background="@color/white"
+                        android:paddingLeft="15dp"/>
+                </LinearLayout>
             </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/border_image">
                 <ImageButton
-                    android:id="@+id/doct2"
+                    android:id="@+id/doctor2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/doct2"
-                    android:background="@color/white"
-                    android:paddingTop="15dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="7dp"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageButton
-                    android:id="@+id/doct3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/doct3"
+                    android:src="@drawable/list2"
                     android:background="@color/white"
                     android:paddingTop="15dp"
                     android:paddingRight="25dp"
-                    android:paddingBottom="7dp"
-                    />
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="7dp" />
+                <TextView
+                    android:id="@+id/namedoctor2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fanny"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/psychologist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/psychologist"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray_2"/>
 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="5dp">
+                    <ImageButton
+                        android:id="@+id/rating2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ratdas"
+                        android:background="@color/white" />
+                    <ImageButton
+                        android:id="@+id/location2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/locdas"
+                        android:background="@color/white"
+                        android:paddingLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/border_image">
+                <ImageButton
+                    android:id="@+id/doctor3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list4"
+                    android:background="@color/white"
+                    android:paddingTop="15dp"
+                    android:paddingRight="25dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="7dp" />
+                <TextView
+                    android:id="@+id/namedoctor3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/micu"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/orthopedist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orthopedist"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/gray_2"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="5dp">
+                    <ImageButton
+                        android:id="@+id/rating3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ratdas"
+                        android:background="@color/white" />
+                    <ImageButton
+                        android:id="@+id/location3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/locdas"
+                        android:background="@color/white"
+                        android:paddingLeft="15dp"/>
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
