@@ -33,12 +33,12 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/name"
-                android:textSize="20sp"
-                android:fontFamily="@font/poppins_bold"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_bold"
                 android:paddingLeft="25dp"
-                android:textColor="@color/black"/>
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
                 android:src="@drawable/notif"
                 android:background="@color/white"
                 android:paddingTop="15dp"
-                android:paddingLeft="180dp"
+                android:paddingLeft="120dp"
                 android:paddingBottom="7dp"
                 />
         </LinearLayout>
@@ -210,7 +210,7 @@
                 android:text="@string/see_all"
                 android:textSize="12sp"
                 android:textColor="@color/color_1"
-                android:paddingLeft="175dp"
+                android:paddingLeft="165dp"
                 android:paddingTop="10dp"
                 android:fontFamily="@font/poppins_regular"/>
         </LinearLayout>
@@ -444,7 +444,7 @@
                 android:text="@string/see_all"
                 android:textSize="12sp"
                 android:textColor="@color/color_1"
-                android:paddingLeft="155dp"
+                android:paddingLeft="145dp"
                 android:paddingTop="10dp"
                 android:fontFamily="@font/poppins_regular"/>
         </LinearLayout>

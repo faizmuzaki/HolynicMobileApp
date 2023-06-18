@@ -100,4 +100,9 @@
     <string name="news6">Beauty Tips For Face: 10 Dos and\nDon\'ts for Naturally Beautiful Skin</string>
     <string name="date6">Mar 2, 2023&#160;.&#160;</string>
     <string name="orthopedist">Orthopedist</string>
+    <string name="password">Password</string>
+    <string name="forgotpassword"><u>Forgot your password?</u></string>
+    <string name="forgotpass">Forgot password?</string>
+    <string name="descForgot">Enter your registered email below\nto receive password reset verification</string>
+    <string name="btnForgot">Next</string>
 </resources>

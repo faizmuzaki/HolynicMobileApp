@@ -8,11 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class DashboardPage extends AppCompatActivity implements View.OnClickListener {
     private ImageButton hospital, doctor, pharmacy, notif, article, doctor1, doctor2, doctor3;
-    private TextView see, textdoctor, pharma, see_all, namedoctor1, namedoctor2, namedoctor3;
-
+    private TextView name, see, textdoctor, pharma, see_all, namedoctor1, namedoctor2, namedoctor3;
+    private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +26,13 @@ public class DashboardPage extends AppCompatActivity implements View.OnClickList
         namedoctor1 = (TextView) findViewById(R.id.namedoctor1);
         namedoctor2 = (TextView) findViewById(R.id.namedoctor2);
         namedoctor3 = (TextView) findViewById(R.id.namedoctor3);
-
+        name = findViewById(R.id.name);
+        name.setOnClickListener(view -> {
+            auth.signOut();
+            startActivity(new Intent(DashboardPage.this, MainActivity.class));
+        });
+        initFirebaseAuth();
+        getData();
         hospital = (ImageButton) findViewById(R.id.hospital);
         doctor = (ImageButton) findViewById(R.id.doctor);
         pharmacy = (ImageButton) findViewById(R.id.pharmacy);
@@ -95,5 +103,15 @@ public class DashboardPage extends AppCompatActivity implements View.OnClickList
             i.putExtra("about", "Perkenalkan, dr. Michu Tiere adalah seorang spesialis ortopedi atau orthopedist yang terlatih dalam mendiagnosis dan merawat berbagai jenis masalah tulang, sendi, dan otot. Beliau memiliki pengetahuan yang luas mengenai berbagai teknik operasi, seperti operasi tulang belakang dan penggantian sendi, serta teknik non-operasi, seperti terapi fisik dan obat-obatan. dr. Michu Tiere selalu berusaha memberikan perawatan yang terbaik bagi pasien-pasiennya, dan dikenal sebagai dokter yang sangat berdedikasi dalam bidangnya.");
             startActivity(i);
         }
+
+    }
+    private void getData() {
+        FirebaseUser user = auth.getCurrentUser();
+        if (user != null) {
+            name.setText(user.getEmail());
+        }
+    }
+    private void initFirebaseAuth() {
+        auth = FirebaseAuth.getInstance();
     }
 }

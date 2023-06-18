@@ -16,7 +16,8 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/button"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_btn"
         android:elevation="22dp"
+        android:layout_marginTop="60dp"
         android:text="@string/get_started" />
 
 </LinearLayout>
