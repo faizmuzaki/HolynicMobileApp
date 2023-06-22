@@ -1,49 +1,111 @@
 package com.holydev.holynicmobileapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.Toast;
 
-public class ListDoctor extends AppCompatActivity implements View.OnClickListener{
-    private TextView parel, cardiologist, fanny;
-    private ImageButton doct1,doct2;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+import com.bumptech.glide.Glide;
+import com.holydev.holynicmobileapp.databinding.ActivityListDoctorBinding;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+import cz.msebera.android.httpclient.Header;
+import de.hdodenhof.circleimageview.CircleImageView;
+
+public class ListDoctor extends AppCompatActivity {
+
+    private static final String TAG = ListDoctor.class.getSimpleName();
+    private ActivityListDoctorBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_doctor);
-        parel = (TextView) findViewById(R.id.parel);
-        cardiologist = (TextView) findViewById(R.id.cardiologist);
-        fanny = (TextView) findViewById(R.id.fanny);
-        doct1 = (ImageButton) findViewById(R.id.doct1);
-        doct2 = (ImageButton) findViewById(R.id.doct2);
+        binding = ActivityListDoctorBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        parel.setOnClickListener(this);
-        fanny.setOnClickListener(this);
-        doct1.setOnClickListener(this);
-        doct2.setOnClickListener(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        binding.listQuotes.setLayoutManager(layoutManager);
+
+//        DividerItemDecoration itemDecoration = new DividerItemDecoration(this, layoutManager.getOrientation());
+//        binding.listQuotes.addItemDecoration(itemDecoration);
+
+        getListQuotes();
+    }
+
+    private void getListQuotes() {
+        binding.progressBar.setVisibility(View.VISIBLE);
+        AsyncHttpClient client = new AsyncHttpClient();
+        String url = "https://api.mresearch.app/doctor";
+        client.get(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                binding.progressBar.setVisibility(View.INVISIBLE);
+
+                ArrayList<String> listName = new ArrayList<>();
+                ArrayList<String> listCategory = new ArrayList<>();
+                ArrayList<String> listPhoto = new ArrayList<>();
+                String result = new String(responseBody);
+                Log.d(TAG, result);
+                try {
+                    JSONObject jsonObject = new JSONObject(result);
+                    JSONArray doctorsArray = jsonObject.getJSONArray("doctors");
+                    for (int i = 0; i < doctorsArray.length(); i++) {
+                        JSONObject doctorObject = doctorsArray.getJSONObject(i);
+                        String category = doctorObject.getString("doctorCategory");
+                        String name = doctorObject.getString("doctorName");
+                        String photo = doctorObject.getString("doctorImage");
+                        listName.add(name);
+                        listCategory.add(category);
+                        listPhoto.add(photo);
+                    }
+                    DoctorAdapter adapter = new DoctorAdapter(listName,listCategory, listPhoto);
+
+                    binding.listQuotes.setAdapter(adapter);
+                } catch (Exception e) {
+                    Toast.makeText(ListDoctor.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
+            }
+
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                binding.progressBar.setVisibility(View.INVISIBLE);
+                String errorMessage;
+                switch (statusCode) {
+                    case 401:
+                        errorMessage = statusCode + " : Bad Request";
+                        break;
+                    case 403:
+                        errorMessage = statusCode + " : Forbidden";
+                        break;
+                    case 404:
+                        errorMessage = statusCode + " : Not Found";
+                        break;
+                    default:
+                        errorMessage = statusCode + " : " + error.getMessage();
+                        break;
+                }
+                Toast.makeText(ListDoctor.this, errorMessage, Toast.LENGTH_SHORT).show();
+            }
+
+        });
     }
 
     @Override
-    public void onClick(View view) {
-        Intent i;
-        if (view.getId() == R.id.doct1 || view.getId() == R.id.parel || view.getId() == R.id.cardiologist) {
-            i = new Intent(this, DetailDoctor.class);
-            i.putExtra("doctorImage",R.drawable.list1);
-            i.putExtra("doctorName", "Dr. Farel Sadboy");
-            i.putExtra("specialist", "Chardiologist");
-            i.putExtra("about", "Perkenalkan, Dokter Farrel Sadboy adalah seorang spesialis jantung atau cardiologist yang berpengalaman dalam bidangnya. Beliau memiliki pengetahuan dan keterampilan yang luas dalam mendiagnosis dan mengobati berbagai kondisi jantung, termasuk serangan jantung, aritmia, dan penyakit jantung koroner. Dokter Farrel Sadboy juga dikenal sebagai dokter yang sangat perhatian terhadap pasiennya, dan selalu berusaha memberikan perawatan yang terbaik untuk kesehatan jantung mereka.");
-            startActivity(i);
-        }else if(view.getId() == R.id.doct2 || view.getId() == R.id.fanny || view.getId() == R.id.psychologist){
-            i = new Intent(this, DetailDoctor.class);
-            i.putExtra("doctorImage",R.drawable.detail2);
-            i.putExtra("doctorName", "Dr. Fanny Retza");
-            i.putExtra("specialist", "Psychologist");
-            i.putExtra("about", "Perkenalkan, Dr. Fanny Retza adalah seorang ahli psikologi atau psychologist yang terampil dalam mendiagnosis dan memberikan perawatan untuk berbagai kondisi mental, emosional, dan perilaku. Beliau memiliki pengetahuan yang luas mengenai berbagai teori psikologi dan teknik terapi, dan selalu berusaha membantu pasiennya untuk mencapai kesehatan mental yang optimal. Dr. Fanny Retza juga dikenal sebagai dokter yang ramah dan terampil dalam membantu pasiennya mengatasi masalah psikologis mereka dengan cara yang aman dan efektif.");
-            startActivity(i);
-        }
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
