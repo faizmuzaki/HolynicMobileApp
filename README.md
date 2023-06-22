@@ -1,7 +1,12 @@
 # HolynicMobileApp
 
-Nama Anggota :
-1. Stefanus Ferry Susanto (2117051025)
-2. Faiz Muzaki (2117051066)
-3. Muhammad Bayu Tiar (2117051071)
-4. Muhammad Al Farrel Elmaretza (2117051092)
+Klinik berbasis aplikasi mobile adalah sebuah inovasi dalam dunia kesehatan yang memungkinkan pasien untuk mengakses layanan kesehatan secara mudah dan cepat melalui aplikasi di smartphone mereka.
+
+# HolyDev
+
+> Stefanus Ferry Susanto (2117051025)
+> Faiz Muzaki (2117051066)
+> Muhammad Bayu Tiar (2117051071)
+> Muhammad Al Farrel Elmaretza (2117051092)
+
+<img src="https://github.com/faizmuzaki/HolynicMobileApp/blob/main/poster.png" style="max-width:50%;">
